@@ -7,7 +7,6 @@ import (
 	rand "math/rand"
 )
 
-
 //
 //
 // cmrand provides convenient wrapper for generating math.rand Source() that uses crypto/rand to get its numbers
@@ -20,8 +19,6 @@ import (
 //     rndSrc := cmrand.NewSource(0) // seed is ignored
 //
 // */
-
-
 
 // CrSource is random source using crypto/rand default generator
 type CrSource struct{}

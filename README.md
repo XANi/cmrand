@@ -10,7 +10,15 @@ Usage
 
 
 ```go
-tou
+package main
+import "github.com/XANi/cmrand"
+import "fmt"
+
+func main() {
+	src := cmrand.New()
+	num := src.Intn(12)
+	fmt.Println(num)
+}
 ```
 
  

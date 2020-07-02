@@ -7,6 +7,7 @@ import (
 	mrand "math/rand"
 )
 
+// CrSource is random source using crypto/rand default generator
 type CrSource struct{}
 
 // New returns *math.Rand initializes with crypto/rand source
@@ -15,7 +16,6 @@ func New() *mrand.Rand {
 }
 
 // NewSource returns math.rand compatible source using crypto/rand's Read() to get the numbers
-
 func NewSource(int64) CrSource {
 	return CrSource{}
 }

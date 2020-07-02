@@ -4,10 +4,9 @@ import "fmt"
 
 // Example usage
 func Example() {
-	src :=New()
-	fmt.Println("Hello")
+	src := cmrand.New()
 	num := src.Intn(12)
 	fmt.Println(num)
-	// Output 6
+	// Output: 6
 }
 

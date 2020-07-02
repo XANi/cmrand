@@ -4,15 +4,31 @@ import (
 	crand "crypto/rand"
 	"encoding/binary"
 	"fmt"
-	mrand "math/rand"
+	rand "math/rand"
 )
+
+
+//
+//
+// cmrand provides convenient wrapper for generating math.rand Source() that uses crypto/rand to get its numbers
+//
+// Usage:
+//
+//     // to get *math.Rand with crypto/rand default source
+//     rnd := cmrand.New()
+//     // to just get source
+//     rndSrc := cmrand.NewSource(0) // seed is ignored
+//
+// */
+
+
 
 // CrSource is random source using crypto/rand default generator
 type CrSource struct{}
 
 // New returns *math.Rand initializes with crypto/rand source
-func New() *mrand.Rand {
-	return mrand.New(NewSource(1))
+func New() *rand.Rand {
+	return rand.New(NewSource(1))
 }
 
 // NewSource returns math.rand compatible source using crypto/rand's Read() to get the numbers

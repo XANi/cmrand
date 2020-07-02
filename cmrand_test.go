@@ -110,14 +110,14 @@ func checkSampleSliceDistributions(t *testing.T, samples []float64, nslices int,
 	}
 }
 
-func (this *statsResults) checkSimilarDistribution(expected *statsResults) error {
-	if !nearEqual(this.mean, expected.mean, expected.closeEnough, expected.maxError) {
-		s := fmt.Sprintf("mean %v != %v (allowed error %v, %v)", this.mean, expected.mean, expected.closeEnough, expected.maxError)
+func (r *statsResults) checkSimilarDistribution(expected *statsResults) error {
+	if !nearEqual(r.mean, expected.mean, expected.closeEnough, expected.maxError) {
+		s := fmt.Sprintf("mean %v != %v (allowed error %v, %v)", r.mean, expected.mean, expected.closeEnough, expected.maxError)
 		fmt.Println(s)
 		return errors.New(s)
 	}
-	if !nearEqual(this.stddev, expected.stddev, expected.closeEnough, expected.maxError) {
-		s := fmt.Sprintf("stddev %v != %v (allowed error %v, %v)", this.stddev, expected.stddev, expected.closeEnough, expected.maxError)
+	if !nearEqual(r.stddev, expected.stddev, expected.closeEnough, expected.maxError) {
+		s := fmt.Sprintf("stddev %v != %v (allowed error %v, %v)", r.stddev, expected.stddev, expected.closeEnough, expected.maxError)
 		fmt.Println(s)
 		return errors.New(s)
 	}

@@ -1,6 +1,6 @@
 // copyright
 
-// cmrand provides convenient wrapper for generating math.rand Source() that uses crypto/rand to get its numbers
+// Package cmrand provides convenient wrapper for generating math.rand Source() that uses crypto/rand to get its numbers
 //
 // Usage:
 //

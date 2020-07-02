@@ -17,7 +17,6 @@ func TestCrSource(t *testing.T) {
 	testNormalDistribution(t, numTestSamples, 0, 1)
 }
 
-
 // stolen from math/rand tests
 // Copyright (c) 2009 The Go Authors. All rights reserved.
 //
@@ -46,8 +45,6 @@ func TestCrSource(t *testing.T) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
 
 func nearEqual(a, b, closeEnough, maxError float64) bool {
 	absDiff := math.Abs(a - b)
@@ -80,7 +77,6 @@ func checkSampleDistribution(t *testing.T, samples []float64, expected *statsRes
 		t.Errorf(err.Error())
 	}
 }
-
 
 func testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64) {
 	//fmt.Printf("testing nsamples=%v mean=%v stddev=%v seed=%v\n", nsamples, mean, stddev, seed);
